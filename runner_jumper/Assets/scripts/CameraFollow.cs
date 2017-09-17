@@ -43,8 +43,9 @@ public class CameraFollow : MonoBehaviour {
 
 
 		if (following == true) {
+			Vector3 offset = new Vector3 (offset_x, offset_y, -10f);
 			if (target) {
-				transform.position = Vector3.Lerp (transform.position, target.position, speed) + new Vector3 (offset_x, offset_y, -10f);
+				transform.position = Vector3.Lerp (transform.position + offset, target.position, speed);
 
 
 			}

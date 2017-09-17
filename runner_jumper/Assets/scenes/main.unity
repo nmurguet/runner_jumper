@@ -1731,7 +1731,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1775,8 +1775,8 @@ MonoBehaviour:
   target: {fileID: 1208161288}
   speed: 0.05
   following: 0
-  offset_x: 0
-  offset_y: 0
+  offset_x: 0.5
+  offset_y: 0.2
   zoom: 0
   zoomout: 0
 --- !u!1 &913208981
@@ -2558,14 +2558,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  jumpForce: 5
+  jumpForce: 2
   groundCheckPoint: {fileID: 1320120043}
   isGrounded: 0
   groundCheckRadius: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  timer: 0.5
+  timer: 2
 --- !u!1 &1250677677
 GameObject:
   m_ObjectHideFlags: 0
