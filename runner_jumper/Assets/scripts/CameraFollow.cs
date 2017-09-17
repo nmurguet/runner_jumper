@@ -29,7 +29,7 @@ public class CameraFollow : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
 		zoom = Input.GetAxis ("Mouse ScrollWheel");
 		if (zoom > 0f) {

@@ -70,6 +70,10 @@ public class player_manager : MonoBehaviour {
 	void Movement()
 	{
 		rb.velocity = new Vector2 (moveSpeed, rb.velocity.y);
+		if (isGrounded) {
+			timer = store_timer;
+		}
+
 
 		if (Input.GetKey (KeyCode.Space)&&isGrounded) {
 				timer -= Time.deltaTime;
@@ -85,7 +89,7 @@ public class player_manager : MonoBehaviour {
 
 			if (Input.GetKeyUp (KeyCode.Space)) {
 				rb.gravityScale = store_grav; 
-				timer = store_timer;
+				
 			}
 
 		}
