@@ -14,7 +14,7 @@ public class player_manager : MonoBehaviour {
 	public float jumpForce; 
 
 	private float store_grav; 
-	private float jump_grav = 0.1f;
+	private float jump_grav = 0.5f;
 
 	//groundeck stuff
 
@@ -74,11 +74,15 @@ public class player_manager : MonoBehaviour {
 			timer = store_timer;
 		}
 
+		if (Input.GetKeyDown(KeyCode.Space) && isGrounded) {
+			rb.velocity = new Vector2 (rb.velocity.x, jumpForce);
 
-		if (Input.GetKey (KeyCode.Space)&&isGrounded) {
+		}
+
+		if (Input.GetKey (KeyCode.Space)) {
 				timer -= Time.deltaTime;
 				if (timer > 0) {
-					rb.velocity = new Vector2 (rb.velocity.x, jumpForce);
+					
 					rb.gravityScale = jump_grav;
 				} else {
 					rb.gravityScale = store_grav; 
